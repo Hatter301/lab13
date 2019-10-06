@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+int main() {
+	int i = 0, n,A,D;
+	int *a;
+	cin >> n>>A>>D;
+	if (n <= 1)
+		cout << "Данные введены некорректно";
+	else {
+		a = (int *)malloc(n * sizeof(int));
+		for (i; i <= n - 1; i++) 
+			a[i] = A*pow(D,i);
+		i = 0;
+		for (i; i <= n - 1; i++)
+			cout << a[i] << " ";
+		free(a);
+	}
+	return 0;
+}
