@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main() {
+	int i = 0, n,k;
+	int *a;
+	cin >> n;
+	if (n <= 0)
+		cout << "Данные введены некорректно";
+	else {
+		k = n-1;
+		a = (int *)malloc(n * sizeof(int));
+		while (i != n) {
+			cin >> a[i];
+			i++;
+		}
+		i = 0;
+		for (i; i != n; i++) {
+			cout << a[i] << " "<<a[k]<<" ";
+			k -= 1;
+		}
+		free(a);
+	}
+	return 0;
+}
